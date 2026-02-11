@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chung-Yu Wei | MSc DSML @ UCL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-muted: #7f8c8d;
+            --bg-color: #ffffff;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--bg-color);
+        }
+
+        /* --- Header Section --- */
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .name-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-bar {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-bar a {
+            color: var(--accent-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-bar a:hover { text-decoration: underline; }
+
+        /* --- Intro Layout --- */
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .profile-text { flex: 2; }
+        .profile-photo { flex: 1; min-width: 200px; }
+
+        .profile-photo img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+        }
+
+        /* --- Section Styling --- */
+        h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            margin-bottom: 25px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .card-sub {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .date { color: var(--text-muted); font-weight: 400; font-size: 0.9rem; }
+
+        ul { padding-left: 18px; margin-top: 10px; }
+        li { margin-bottom: 8px; color: #444; }
+
+        /* --- Skills --- */
+        .skill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            background: #f1f3f5;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container { flex-direction: column-reverse; }
+            .card-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="name-title">Chung-Yu Wei (魏仲宇)</h1>
+        <div class="contact-bar">
+            <span><i class="fa-solid fa-location-dot"></i> London</span>
+            <a href="mailto:Chungyuweioffer@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/weinana1005" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-text">
+            <p>I am an <strong>Algorithm Engineer / Data Scientist</strong> currently pursuing my <strong>MSc in Data Science and Machine Learning</strong> at <strong>University College London (UCL)</strong>. </p>
+            <p>My work focuses on building robust AI systems, with specific expertise in <strong>3D-informed Computer Vision</strong> and <strong>Weakly Supervised Learning</strong>. I have a strong mathematical background with a First Class Honours degree from the University of Manchester.</p>
+            <p>Currently, I am exploring the intersection of deep learning and real-world scalability, particularly in automated annotation and efficient model deployment.</p>
+        </div>
+        <div class="profile-photo">
+            <img src="https://via.placeholder.com/400x500?text=Profile+Image" alt="Chung-Yu Wei">
+        </div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="card">
+        <div class="card-header">University College London <span class="date">Sep 2024 - Dec 2025</span></div>
+        <div class="card-sub">MSc Data Science and Machine Learning</div>
+        <ul>
+            <li>Core: Bayesian Deep Learning, Applied Machine Learning, Machine Vision.</li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header">University of Manchester <span class="date">Sep 2021 - June 2024</span></div>
+        <div class="card-sub">BSc (Hons) Mathematics and Statistics | First Class Honours</div>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="card">
+        <div class="card-header">Tractable <span class="date">May 2025 - Sep 2025</span></div>
+        <div class="card-sub">Research Intern</div>
+        <ul>
+            <li>Developed a 3D-informed mask-transfer pipeline using Grounding DINO and SAM, reducing manual labeling effort by 70%.</li>
+            <li>Built a scalable annotation engine to rapidly onboard new vehicle models.</li>
+            <li>Improved model mIoU by 15% through retraining on enriched, high-quality datasets.</li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="card-header">Bain & Company <span class="date">July 2023 - Aug 2023</span></div>
+        <div class="card-sub">Data Analyst Intern</div>
+        <ul>
+            <li>Performed regression analysis and financial data cleaning using Python and Excel.</li>
+            <li>Produced 7+ analytical reports visualizing market stability and growth trends.</li>
+        </ul>
+    </div>
+    <h2>Projects</h2>
+    <div class="card">
+        <div class="card-header">Weakly Supervised Learning with CAM <span class="date">Python | PyTorch</span></div>
+        <ul>
+            <li>Implemented GradCAM on ResNet50 for automatic localization of target regions.</li>
+            <li>Achieved 91.3% test accuracy on Oxford-IIIT Pet dataset across 37 categories.</li>
+        </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skill-group">
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">NumPy</span>
+        <span class="tag">Scikit-Learn</span><span class="tag">XGBoost</span><span class="tag">MATLAB</span>
+        <span class="tag">R</span><span class="tag">Git</span><span class="tag">LaTeX</span>
+    </div>
+
+</body>
+</html>
